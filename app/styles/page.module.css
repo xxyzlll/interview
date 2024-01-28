@@ -1,16 +1,22 @@
-.flex{
+.flex {
     display: flex;
     flex-wrap: nowrap;
     overflow: auto;
-    
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
-    overflow: -moz-scrollbars-none; /* Firefox */
+    padding-left: 124px;
+    padding-right: 200px;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+    overflow: -moz-scrollbars-none;
+    /* Firefox */
     overflow: scroll;
-    scrollbar-color: transparent; /* Chrome and Safari */
+    scrollbar-color: transparent;
+    /* Chrome and Safari */
 }
 
 .flex::-webkit-scrollbar {
-    width: 0; /* Chrome and Safari */
+    width: 0;
     height: 0;
-  }
+}

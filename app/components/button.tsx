@@ -4,6 +4,7 @@ import styles from "../styles/button.module.css";
 
 interface Prop {
   direction: string
+  show: boolean
   onClick: () => void
 }
 
@@ -39,7 +40,14 @@ export default function Button(props: Prop) {
   }
 
   return (
-    <div className={`${styles.container} ${styles[props.direction]}`}>
+    <div className={`${styles.container} ${styles[props.direction]}`}
+      style={{
+        transform: props.show ? 'translateX(0)' : 'translateX(-999999px)',
+        background: props.direction === 'left' ?
+          'linear-gradient(90deg, #030303 0%, rgba(3, 3, 3, 0.80) 55.46%, rgba(3, 3, 3, 0.00) 100%);' :
+          'linear-gradient(270deg, #030303 0%, rgba(3, 3, 3, 0.80) 55.46%, rgba(3, 3, 3, 0.00) 100%);'
+      }}
+    >
       <div
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
